@@ -1,0 +1,6 @@
+Enough epochs to get near a minimum in the training loss, no real upper limit on this. Just need to make sure the training loss is low and not improving much with more training.
+Batch size is large enough to train efficiently, but small enough to fit the data in memory. No real “best” value here, depends on GPU memory usually.
+Size of the RNN cells (number of units in the hidden layers) is large enough to fit the data well. Again, no real “best” value.
+The sequence length (seq_length) here should be about the size of the length of sentences you want to generate. Should match the structure of the data.
+The learning rate shouldn’t be too large because the training algorithm won’t converge. But needs to be large enough that training doesn’t take forever.
+Set show_every_n_batches to the number of batches the neural network should print progress.
